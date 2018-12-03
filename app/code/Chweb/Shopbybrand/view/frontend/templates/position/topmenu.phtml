@@ -1,0 +1,31 @@
+<?php
+/**
+ * Chweb
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Chweb.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.Chweb.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Chweb
+ * @package     Chweb_Shopbybrand
+ * @copyright   Copyright (c) 2016 Chweb (http://www.Chweb.com/)
+ * @license     https://www.Chweb.com/LICENSE.txt
+ */
+?>
+<?php
+	$helper = $this->helper('Chweb\Shopbybrand\Helper\Data');
+	if($helper->canShowBrandLink(\Chweb\Shopbybrand\Model\Config\Source\BrandPosition::CATEGORY)):
+?>
+<li class="level0 nav-6 last level-top ui-menu-item" role="presentation">
+	<a href="<?php echo $helper->getBrandUrl() ?>" class="level-top ui-corner-all" id="ui-id-8" tabindex="-1" role="menuitem">
+		<span><?php echo $helper->getBrandTitle() ?></span>
+	</a>
+</li>
+<?php endif; ?>

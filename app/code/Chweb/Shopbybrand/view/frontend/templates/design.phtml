@@ -1,0 +1,42 @@
+<?php
+/**
+ * Chweb
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Chweb.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.Chweb.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Chweb
+ * @package     Chweb_Osc
+ * @copyright   Copyright (c) 2016 Chweb (https://www.Chweb.com/)
+ * @license     https://www.Chweb.com/LICENSE.txt
+ */
+?>
+<?php
+	$helper = $block->helper();
+?>
+<style type="text/css">
+    /*===================================================================
+    |                            CONFIGUARATION STYLE                    |
+    ====================================================================*/
+	<?php if($color = $helper->getBrandConfig('color')): ?>
+	.block-brand-search,
+	.block-brand-list ul.brand-options li.active{
+		background-color: <?php echo $color ?>;
+	}
+	<?php endif; ?>
+	<?php if($helper->enableSearch() || $helper->enableFeature()): ?>
+		.page-title-wrapper{display: none}
+	<?php endif; ?>
+	/*===================================================================
+	|                           Custom STYLE                             |
+	====================================================================*/
+	<?php echo $block->getCustomCss() ?>
+</style>

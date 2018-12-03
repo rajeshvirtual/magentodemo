@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Chweb
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Chweb.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.Chweb.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Chweb
+ * @package     Chweb_Shopbybrand
+ * @copyright   Copyright (c) 2016 Chweb (http://www.Chweb.com/)
+ * @license     https://www.Chweb.com/LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_ImportExport:etc/import.xsd">
+    <entity name="Chweb_brand" label="Chweb Shopbybrand" model="Chweb\Shopbybrand\Model\Import\Brand" behaviorModel="Chweb\Shopbybrand\Model\Import\Behavior\Brand" />
+</config>

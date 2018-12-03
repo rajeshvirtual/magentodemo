@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Chweb
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Chweb.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.Chweb.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Chweb
+ * @package     Chweb_Shopbybrand
+ * @copyright   Copyright (c) 2016 Chweb (http://www.Chweb.com/)
+ * @license     https://www.Chweb.com/LICENSE.txt
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Chweb_Shopbybrand::css/style.css"/>
+    </head>
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="Chweb\Shopbybrand\Block\Design" name="brand.design" as="generator.css" template="design.phtml"/>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Chweb\Shopbybrand\Block\Brand" name="brand.content" template="brands.phtml">
+                <block class="Chweb\Shopbybrand\Block\Brand\Search" name="brand.search" as="search" ifconfig="shopbybrand/brandpage/search/enable" template="brand/search.phtml"/>
+                <block class="Chweb\Shopbybrand\Block\Brand\Featured" name="brand.featured" as="feature" ifconfig="shopbybrand/brandpage/feature/enable"/>
+                <block class="Chweb\Shopbybrand\Block\Brand\BrandList" name="brand.list" as="list" template="brand/list.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
